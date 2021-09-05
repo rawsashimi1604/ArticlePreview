@@ -1,0 +1,145 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+  background-color: #ecf2f8;
+}
+
+main {
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+main .header-img {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%;
+}
+
+main .header-img img {
+  margin-top: -50px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  padding: 3em 2em;
+}
+
+main section h1 {
+  margin-bottom: 1em;
+  line-height: 1.5;
+}
+
+main section p {
+  color: #6d7f97;
+  font-size: 110%;
+  line-height: 1.7;
+}
+
+main .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2em 2em 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .info .post-pic {
+  border-radius: 100%;
+  width: 50px;
+}
+
+main .info .post-info {
+  margin-left: -70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .info .post-info .post-name {
+  font-weight: 700;
+  font-size: 110%;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.3em;
+}
+
+main .info .post-info .post-date {
+  color: #9eafc2;
+}
+
+main .info .share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ecf2f8;
+}
+
+main .info .share-btn img {
+  display: block;
+  margin: auto;
+  margin-top: 25%;
+  width: 20px;
+}
+
+main .share {
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+}
+/*# sourceMappingURL=main.css.map */

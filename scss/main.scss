@@ -1,0 +1,105 @@
+@import "config";
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2em;
+
+  background-color: $col-4;
+}
+
+main {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .header-img {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    flex: 1 0 30%;
+
+    img {
+      margin-top: -50px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  section {
+    flex: 1 0 50%;
+    padding: 3em 2em;
+
+    h1 {
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+
+    p {
+      color: $col-2;
+      font-size: 110%;
+      line-height: 1.7;
+    }
+  }
+
+  .info {
+    flex: 1 0 20%;
+    display: flex;
+    padding: 0 2em 2em 2em;
+    justify-content: space-between;
+    align-items: center;
+
+    .post-pic {
+      border-radius: 100%;
+      width: 50px;
+    }
+
+    .post-info {
+      margin-left: -70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .post-name {
+        font-weight: 700;
+        font-size: 110%;
+        letter-spacing: 0.3px;
+        margin-bottom: 0.3em;
+      }
+
+      .post-date {
+        color: $col-3;
+      }
+    }
+
+    .share-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background-color: $col-4;
+
+      img {
+        display: block;
+        margin: auto;
+        margin-top: 25%;
+        width: 20px;
+      }
+    }
+  }
+
+  .share {
+    display: none;
+    flex: 1 0 20%;
+  }
+}
