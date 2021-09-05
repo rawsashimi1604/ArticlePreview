@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+.none {
+  display: none !important;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   font-size: 13px;
@@ -22,7 +26,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2em;
+  padding: 5em 2em;
   background-color: #ecf2f8;
 }
 
@@ -39,16 +43,19 @@ main {
       justify-content: space-around;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden;
+  min-width: 370px;
+  max-width: 370px;
+}
+
+main .left {
+  height: 250px;
 }
 
 main .header-img {
+  overflow: hidden;
   height: 400px;
   width: 100%;
   overflow: hidden;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
 }
 
 main .header-img img {
@@ -59,10 +66,9 @@ main .header-img img {
 }
 
 main section {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-  padding: 3em 2em;
+  padding: 3em;
+  padding-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
 main section h1 {
@@ -74,16 +80,14 @@ main section p {
   color: #6d7f97;
   font-size: 110%;
   line-height: 1.7;
+  margin-bottom: 1em;
 }
 
 main .info {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 2em 2em 2em;
+  padding: 2em 3em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -98,7 +102,7 @@ main .info .post-pic {
 }
 
 main .info .post-info {
-  margin-left: -70px;
+  margin-left: -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,10 +140,128 @@ main .info .share-btn img {
   width: 20px;
 }
 
+main .info .share-btn:hover {
+  cursor: pointer;
+  background-color: #9eafc2;
+}
+
+main .info .share-btn:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+
 main .share {
-  display: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2em 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: #48556a;
+}
+
+main .share span {
+  color: #9eafc2;
+  font-size: 105%;
+  letter-spacing: 8px;
+}
+
+main .share .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: -10px;
+}
+
+main .share .icons img {
+  margin-right: 15px;
+  width: 25px;
+}
+
+main .share .share-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #6d7f97;
+}
+
+main .share .share-btn img {
+  display: block;
+  margin: auto;
+  margin-top: 25%;
+  width: 20px;
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg) brightness(104%) contrast(104%);
+}
+
+main .share .share-btn:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-width: 800px;
+    max-width: 800px;
+  }
+  main .left {
+    height: auto;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 35%;
+            flex: 1 0 35%;
+  }
+  main .left .header-img {
+    height: 100%;
+  }
+  main .left .header-img img {
+    height: 100%;
+    margin-top: 0px;
+  }
+  main .right .pos-parent {
+    position: relative;
+    overflow: visible;
+  }
+  main .right .post-info {
+    margin-left: -170px;
+  }
+  main .right .share {
+    position: absolute;
+    margin-top: -140px;
+    right: 2px;
+    margin-right: -65px;
+    padding: 1em 2em;
+    border-radius: 5px;
+  }
+  main .right .share span {
+    margin-right: 20px;
+  }
+  main .right .share .icons .img-p {
+    margin-right: 0;
+  }
+  main .right .share .share-btn {
+    display: none;
+  }
+  main .right .share .arrow {
+    border-top: 10px solid #48556a;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 118px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
