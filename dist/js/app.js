@@ -4,7 +4,8 @@ const shareContainer = document.querySelector("#share");
 const infoBtn = document.querySelector("#info-btn");
 const shareBtn = document.querySelector("#share-btn");
 
-window.onfocus = () => {
+const arrow = document.querySelector("#arrow");
+window.onmousemove = () => {
     if (window.innerWidth < 1000) {
         infoBtn.addEventListener('click', () => {
             infoContainer.classList.toggle("none");
@@ -18,6 +19,7 @@ window.onfocus = () => {
     } else {
         infoBtn.addEventListener('click', () => {
             shareContainer.classList.toggle("none");
+            arrow.classList.toggle("none");
         });
     }
 }
